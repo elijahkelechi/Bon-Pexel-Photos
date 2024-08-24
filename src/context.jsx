@@ -7,8 +7,12 @@ export const AppProvider = ({ children }) => {
   // Function to get the initial dark mode preference
   const getInitialTheme = () => {
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const storedMode = localStorage.getItem("darkTheme") === "true";
-    return storedMode || darkModeQuery.matches;
+    const storedMode = localStorage.getItem("darkTheme");
+    return storedMode === "true"
+      ? true
+      : storedMode === "false"
+      ? false
+      : darkModeQuery.matches;
   };
 
   // State to manage dark theme

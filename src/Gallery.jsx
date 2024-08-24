@@ -52,19 +52,17 @@ const Gallery = () => {
   //Tester
 
   return (
-    <div className="gallery-div">
-      <section className="image-container">
-        {results2.map((images) => (
-          <div key={images.id}>
-            <img
-              className="img"
-              src={images.urls.regular}
-              style={{ border: "7px grey solid" }}
-            />
-          </div>
-        ))}
-      </section>
-    </div>
+    <section className="image-container">
+      {results2.map((images) => (
+        <div key={images.id}>
+          <img
+            className="img"
+            src={images.urls.regular}
+            style={{ border: "7px grey solid" }}
+          />
+        </div>
+      ))}
+    </section>
   );
 };
 
