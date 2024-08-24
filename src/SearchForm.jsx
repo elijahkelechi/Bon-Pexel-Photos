@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useGlobalContext } from "./context";
+import logo from "/mylogo.png";
 
 const SearchForm = () => {
   const [inputVal, setInputVal] = useState("");
@@ -21,11 +22,7 @@ const SearchForm = () => {
     <div className="top-bar">
       <h1 className="title">Bon Pexel Photos</h1>
       <div className="logo">
-        <img
-          style={{ maxWidth: "120px" }}
-          src="../public/logo.png"
-          alt="project logo"
-        />
+        <img style={{ maxWidth: "120px" }} src={logo} alt="project logo" />
       </div>
       <form className="search-form" onSubmit={submitBtn}>
         <input
